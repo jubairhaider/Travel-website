@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+$body-color: #fff;
+$color: #333;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: "roboto", sans-serif;
+  width: 100%;
+}
+
+$text-color: #333;
+$menu-bg: #fff;
+$menu-hover: #eee;
+$menu-border: #555;
+
+nav {
+  //top: 0; // Fix the menu to the top
+  //position: fixed; // Fix the menu to the top
+  height: 40px;
+  width: 100%;
+  background-color: $menu-bg;
+  color: $text-color;
+  position: fixed;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  .active {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  li {
+    display: inline;
+    float: left;
+  }
+
+  a {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    color: $text-color;
+    text-decoration: none;
+  }
+
+  li:hover {
+    background-color: $menu-hover;
+  }
+
+  a#openup {
+    display: none;
+  }
+} //nav
+
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+} /* For IE 6/7 (trigger hasLayout) */
+#showcase {
+  background: url(https://desktopwalls.net/wp-content/uploads/2015/09/Tropical%20Beach%20Palm%20Trees%204K%20Desktop%20Wallpaper.jpg)
+    no-repeat center/cover;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  .container {
+    margin-top: 50vh;
+    h1 {
+      font-size: 4rem;
+      text-align: center;
+      color: $body-color;
+    }
+    hr {
+      width: 50%;
+      margin-left: 25% !important;
+      margin-right: 25% !important;
+      border: 1px solid #fff;
+    }
+    h2 {
+      margin-top: 1rem;
+      font-size: 2.5rem;
+      text-align: center;
+      color: $body-color;
+    }
+  }
+}
+.container {
+  max-width: 1180px;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+#about {
+  padding: 25px;
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.2rem;
+    padding: 20px;
+  }
+}
+#prices {
+  background: url(https://rh7soccershow.co.za/wp-content/uploads/2019/03/sunny-day-white-sky-4k-time-lapse_ekyxov3___F0000.png)
+    no-repeat center/cover;
+  height: 150vh;
+  width: 100%;
+  .cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 3rem;
+    .card {
+      display: grid;
+      grid-template-columns: 300px;
+      grid-template-rows: 200px 100px 80px;
+      grid-template-areas: "image" "text" "stats";
+      background-color: white;
+      border-radius: 18px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+      text-align: center;
+      transition: 0.5s ease;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+      }
+
+      .image1 {
+        grid-area: image;
+        background: url(https://www.worldfinance.com/wp-content/uploads/2020/01/Bahamas_tax_residency.jpg);
+        background-size: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+      .image2 {
+        grid-area: image;
+
+        background: url(https://cnet3.cbsistatic.com/img/SAsgXnFa6cRVRRq1OA0Y4RUN6n8=/940x0/2019/05/09/00ed7ffd-9525-4b2c-a388-848e09d8fc5f/gettyimages-1096742886-1.jpg);
+        background-size: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+      .image3 {
+        grid-area: image;
+
+        background: url(https://media.timeout.com/images/105240189/image.jpg);
+        background-size: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+      .image4 {
+        grid-area: image;
+
+        background: url(https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*);
+        background-size: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+      .image5 {
+        grid-area: image;
+
+        background: url(https://www.justgo.travel/wp-content/uploads/2019/11/blue-old-timer-drives-along-pastel-colored-colonial-buildings-havana.jpg);
+        background-size: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+      .image6 {
+        grid-area: image;
+
+        background: url(https://cdn.welcometothejungle.co/uploads/article/image/0055/155870/Amsterdam-2.jpg);
+        background-size: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+      .text-item {
+        grid-area: text;
+        margin: 25px;
+      }
+    }
+  }
+}
+.price-title {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+}
+#offers {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://s-media-cache-ak0.pinimg.com/originals/b2/8b/2e/b28b2eb270fdab4226379656151b6c7f.jpg)
+      no-repeat center/cover;
+
+  height: 100vh;
+  overflow: hidden;
+
+  .text {
+    margin-top: 50vh;
+    text-align: center;
+    color: $body-color;
+    h3 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+    .btn {
+      display: inline-block;
+      margin: 1rem;
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem;
+      border: 2px solid #fff;
+      border-radius: 6px;
+      transition-duration: 0.4s;
+      transition-timing-function: ease;
+      &:hover {
+        color: $text-color;
+        background-color: #fff;
+      }
+    }
+  }
+}
+footer {
+  padding: 3rem;
+}
+@media screen and (max-width: 780px) {
+  nav {
+    height: auto;
+    border-bottom: 0;
+
+    ul {
+      display: none;
+      height: auto;
+    }
+
+    li {
+      width: 100%;
+      float: left;
+      position: relative;
+    }
+
+    a {
+      text-align: left;
+      width: 100%;
+      text-indent: 25px;
+      background: $menu-bg;
+      border-bottom: 1px solid $menu-border;
+    }
+
+    a:hover {
+      background: $menu-hover;
+    }
+
+    a#openup:after {
+      content: "|||";
+      transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg); /* IE 9 */
+      -webkit-transform: rotate(-90deg); /* Safari and Chrome */
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      position: absolute;
+      right: 5px;
+      top: 20px;
+    }
+
+    a#openup {
+      display: block;
+      background-color: $menu-bg;
+      width: 100%;
+      position: relative;
+    }
+  }
+  .cards {
+    grid-column: auto;
+  }
+  #showcase {
+    background: url(https://desktopwalls.net/wp-content/uploads/2015/09/Tropical%20Beach%20Palm%20Trees%204K%20Desktop%20Wallpaper.jpg)
+      no-repeat center/cover;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .container {
+      margin-top: 25vh;
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+        color: $body-color;
+      }
+      hr {
+        width: 50%;
+        margin-left: 25% !important;
+        margin-right: 25% !important;
+        border: 1px solid #fff;
+      }
+      h2 {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        text-align: center;
+        color: $body-color;
+      }
+    }
+  }
+  #offers {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(https://s-media-cache-ak0.pinimg.com/originals/b2/8b/2e/b28b2eb270fdab4226379656151b6c7f.jpg)
+        no-repeat center/cover;
+
+    height: 100vh;
+    overflow: hidden;
+
+    .text {
+      margin-top: 50vh;
+      text-align: center;
+      color: $body-color;
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .btn {
+        display: inline-block;
+        margin: 1rem;
+        color: #fff;
+        text-decoration: none;
+        padding: 1rem;
+        border: 2px solid #fff;
+        border-radius: 6px;
+        transition-duration: 0.4s;
+        transition-timing-function: ease;
+        &:hover {
+          color: $text-color;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  #prices {
+    background: url(https://rh7soccershow.co.za/wp-content/uploads/2019/03/sunny-day-white-sky-4k-time-lapse_ekyxov3___F0000.png)
+      no-repeat center/cover;
+    height: 450vh;
+    width: 100%;
+    .cards {
+      margin: 3rem;
+      display: block;
+
+      .card {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 200px 100px 80px;
+        grid-template-areas: "image" "text" "stats";
+        background-color: white;
+        border-radius: 18px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+        text-align: center;
+        margin: 2rem;
+
+        .image1 {
+          grid-area: image;
+          background: url(https://www.worldfinance.com/wp-content/uploads/2020/01/Bahamas_tax_residency.jpg);
+          background-size: cover;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+        }
+        .image2 {
+          grid-area: image;
+          grid-area: image;
+          background: url(https://cnet3.cbsistatic.com/img/SAsgXnFa6cRVRRq1OA0Y4RUN6n8=/940x0/2019/05/09/00ed7ffd-9525-4b2c-a388-848e09d8fc5f/gettyimages-1096742886-1.jpg);
+          background-size: cover;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+        }
+        .image3 {
+          grid-area: image;
+          grid-area: image;
+          background: url(https://media.timeout.com/images/105240189/image.jpg);
+          background-size: cover;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+        }
+        .image4 {
+          grid-area: image;
+          grid-area: image;
+          background: url(https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*);
+          background-size: cover;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+        }
+        .image5 {
+          grid-area: image;
+          grid-area: image;
+          background: url(https://www.justgo.travel/wp-content/uploads/2019/11/blue-old-timer-drives-along-pastel-colored-colonial-buildings-havana.jpg);
+          background-size: cover;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+        }
+        .image6 {
+          grid-area: image;
+          grid-area: image;
+          background: url(https://cdn.welcometothejungle.co/uploads/article/image/0055/155870/Amsterdam-2.jpg);
+          background-size: cover;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+        }
+        .text-item {
+          grid-area: text;
+          margin: 25px;
+        }
+      }
+    }
+  }
+}
